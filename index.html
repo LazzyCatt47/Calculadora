@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Derivadas Algebraicas</title>
+</head>
+<body>
+<body style="background-color:lavender;">
+    <h1>Calculadora de Derivadas</h1>
+<p style="color:midnightblue;">
+
+
+    
+    <label for="funcion">Función:</label>
+    <input type="text" id="funcion"><br>
+    
+    <button onclick="calcularDerivada()">Calcular Derivada</button><br>
+    
+    <p id="resultado"></p>
+    
+    <script>
+        function calcularDerivada() {
+            var funcion = document.getElementById("funcion").value;
+            var resultado = derivada(funcion);
+            document.getElementById("resultado").innerHTML = "La derivada de la función es: " + resultado;
+        }
+        
+        function derivada(funcion) {
+            return math.derivative(funcion, 'x').toString();
+        }
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.6.0/math.js"></script>
+<img src="istockphoto-521203614-612x612.jpg">
+</body>
+</html>
